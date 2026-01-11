@@ -1,11 +1,9 @@
 import random
 import json
 import os
-
 class TwentyQuestionsAI:
     def __init__(self):
         self.data_file = "people_data.json"
-        
         # Questions relevant to guessing people
         self.questions = [
             "Is this person male?",
@@ -137,7 +135,7 @@ class TwentyQuestionsAI:
         print("  2. I'll ask you up to 20 yes/no questions")
         print("  3. Answer honestly with:  yes, no, or unknown")
         print("  4. I'll try to guess who you're thinking of!\n")
-        
+        print(f"Number of people in database: {len(self.people_data)}")
         input("Press Enter when you've thought of a person...")
         
         # Ask questions
