@@ -33,6 +33,9 @@ class TwentyQuestionsAI:
             "Is this person a former Bandit?",
             "Is this person one of the three Mosquitoes?",
         ]
+        self.question_count = 0
+        self.max_questions = 20
+        self.answers = {}
 
     def list_people_in_database(self):
         """List all people in the database."""
@@ -43,11 +46,6 @@ class TwentyQuestionsAI:
         print("\n📋 People in the database:")
         for i, person in enumerate(sorted(self.people_data.keys()), 1):
             print(f"  {i}. {person}")
-
-        self.question_count = 0
-        self.max_questions = 20
-        self.answers = {}
-        self.people_data = self.load_people_data()
 
     def ask_question(self, question):
         """Ask a question and get yes/no/unknown response"""
